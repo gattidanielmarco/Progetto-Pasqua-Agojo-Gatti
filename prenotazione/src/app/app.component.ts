@@ -3,7 +3,7 @@ import {  //Importa FormBuilder e FormGroup
   FormBuilder,
   FormGroup
 } from '@angular/forms';
-import { Prenotazione } from 'prenotazione';
+import { Prenotazione } from './prenotazione';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,7 +12,7 @@ import { Prenotazione } from 'prenotazione';
 
 export class AppComponent implements OnInit {
   myForm: FormGroup;  //Dichiara una variabile di tipo FormGroup
-  p = Prenotazione;
+  p = Array<Prenotazione>();
   constructor(fb: FormBuilder) { //Il costruttore riceve come parametro il From Builder
     /*Diciamo al FormBuilder di creare un FormGroup che conterrà un FormControl
      *Chiamato sku, con valore di default ABC123 */

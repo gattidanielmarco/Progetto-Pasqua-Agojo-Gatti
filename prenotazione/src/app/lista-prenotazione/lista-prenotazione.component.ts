@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { Prenotazione } from 'prenotazione';
+import { Prenotazione } from '../prenotazione';
 @Component({
   selector: 'app-lista-prenotazione',
   templateUrl: './lista-prenotazione.component.html',
