@@ -6,7 +6,7 @@ import { Prenotazione } from '../prenotazione';
   styleUrls: ['./lista-prenotazione.component.css']
 })
 export class ListaPrenotazioneComponent implements OnInit {
-  @Input()prenotazione: Prenotazione;
+  @Input()p: Prenotazione;
   constructor() { }
 
   ngOnInit() {

@@ -42,10 +42,10 @@
             [formControl]="myForm.controls['ora']" class="form-control" #ora>
    </div>
    
-   <button type="submit" class="btn btn-primary" (click)="onAddCar(nome,cognome,indirizzo,telefono,email,data,ora)">Submit</button>
+   <button type="submit" class="btn btn-primary" (click)="onSubmit(nome,cognome,indirizzo,telefono,email,data,ora)">Submit</button>
    
  </form>
 </div>
 
-<app-lista-prenotazione *ngIf="selectedPrenotazione" [p]="selectedPrenotazione"></app-lista-prenotazione>
+<app-lista-prenotazione *ngFor="let a of p" [p]="a"></app-lista-prenotazione>
 <app-visua-prenotazione></app-visua-prenotazione>
