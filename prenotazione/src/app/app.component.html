@@ -1,0 +1,51 @@
+<div class="container">
+ <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" class="jumbotron">
+   <div class="form-group">
+     <label for="nomeInput">Nome</label>
+     <input type="text" id="nomeInput" placeholder="NOME" name="nome" 
+            [formControl]="myForm.controls['nome']" class="form-control" #nome>
+   </div>
+   <br>
+   <div class="form-group">
+     <label for="cognomeInput">Cognome</label>
+     <input type="text" id="cognomeInput" placeholder="COGNOME" name="cognome" 
+            [formControl]="myForm.controls['cognome']" class="form-control" #cognome>
+   </div>
+   <br>
+   <div class="form-group">
+     <label for="indirizzoInput">Indirizzo</label>
+     <input type="text" id="indirizzoInput" placeholder="INDIRIZZO" name="indirizzo" 
+            [formControl]="myForm.controls['indirizzo']" class="form-control" #indirizzo>
+   </div>
+   <br>
+   <div class="form-group">
+     <label for="telefonoInput">Telefono</label>
+     <input type="tel" id="telefonoInput" placeholder="TELEFONO" name="telefono" 
+            [formControl]="myForm.controls['telefono']" class="form-control" #telefono>
+   </div>
+   <br>
+   <div class="form-group">
+     <label for="emailInput">Email</label>
+     <input type="email" id="emailInput" placeholder="EMAIL" name="email"
+            [formControl]="myForm.controls['email']" class="form-control" #email>
+   </div>
+   <br>
+   <div class="form-group">
+     <label for="dataInput">Data Prenotazione</label>
+     <input type="date" id="dataInput" placeholder="DATA" name="data"
+            [formControl]="myForm.controls['data']" class="form-control" #data>
+   </div>
+   <br>
+   <div class="form-group">
+     <label for="oraInput">Ora Prenotazione</label>
+     <input type="time" id="oraInput" placeholder="ORA" name="ora"
+            [formControl]="myForm.controls['ora']" class="form-control" #ora>
+   </div>
+   
+   <button type="submit" class="btn btn-primary" (click)="onAddCar(nome,cognome,indirizzo,telefono,email,data,ora)">Submit</button>
+   
+ </form>
+</div>
+
+<app-lista-prenotazione *ngIf="selectedPrenotazione" [p]="selectedPrenotazione"></app-lista-prenotazione>
+<app-visua-prenotazione></app-visua-prenotazione>
