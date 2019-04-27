@@ -43,9 +43,9 @@
    </div>
    
    <button type="submit" class="btn btn-primary" (click)="onSubmit(nome,cognome,indirizzo,telefono,email,data,ora)">Submit</button>
-   
+   <app-lista-prenotazione *ngFor="let a of p" [p]="a"></app-lista-prenotazione>
+   <app-visua-prenotazione></app-visua-prenotazione>
  </form>
 </div>
 
-<app-lista-prenotazione *ngFor="let a of p" [p]="a"></app-lista-prenotazione>
-<app-visua-prenotazione></app-visua-prenotazione>
+

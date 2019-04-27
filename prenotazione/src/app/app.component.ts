@@ -38,5 +38,26 @@ export class AppComponent implements OnInit {
       prenota.data = data.value;
       prenota.ora = ora.value;
       this.p.push(prenota);
+      if(prenota.nome == this.p[prenota.nome]){
+        prenota.nome = "";
+      }
+      if(prenota.cognome == this.p[prenota.cognome]){
+        prenota.cognome = "";
+      }
+      if(prenota.indirizzo == this.p[prenota.indirizzo]){
+        prenota.indirizzo = "";
+      }
+      if(prenota.telefono == this.p[prenota.telefono]){
+        prenota.telefono = 0;
+      }
+      if(prenota.email == this.p[prenota.email]){
+        prenota.email = "";
+      }
+      if(prenota.data == this.p[prenota.data]){
+        prenota.data = "";
+      }
+      if(prenota.ora == this.p[prenota.ora]){
+        prenota.ora = "";
+      }
   }
 }
